@@ -13,33 +13,35 @@ const questions = [
     {
         type: 'input',
         name: 'description',
-        message: 'Please enter desciption of your project.'
+        message: 'Please write a short desciption of your project.'
     },
     {
         type: 'input',
         name: 'installation',
-        message: 'Please enter installation instructions.'
+        message: 'What command should be run to install dependencies?',
+        choices: ["npm i inquirer@8.2.4"]
     },
     {
         type: 'input',
         name: 'usage',
-        message: 'Please enter usage information.'
+        message: 'How do I use this application?'
     },
     {
         type: 'input',
         name: 'contribution',
-        message: 'Please enter contribution guidelines.'
+        message: 'Please enter guidelines on how to contribute to the repo.'
     },
     {
         type: 'input',
-        name: 'instructions',
-        message: 'Please enter test instructions.'
+        name: 'test',
+        message: 'What command should be used to run tests?',
+        choices: ["npm test"]
     },
     {
         type: 'list',
         name: 'license',
         message: 'Which license do you want to use?',
-        choices: ["Apache", "GNU", "MIT", "Mozilla"]
+        choices: ["Apache", "Eclipse", "MIT", "Mozilla"]
     },
     {
         type: 'input',
@@ -51,7 +53,6 @@ const questions = [
         name: 'email',
         message: 'What is your email address?'
     }
-
 ];
 
 // TODO: Create a function to write README file
