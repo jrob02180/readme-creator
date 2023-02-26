@@ -3,14 +3,14 @@ const licenseArr = ["Apache", "Eclipse", "MIT", "Mozilla"];
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
 function renderLicenseBadge(license) {
-  if (licenseArr === [0]) {
-    return "[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)"
-  } else  if (licenseArr === [1]) {
-    return "[![License](https://img.shields.io/badge/License-EPL_1.0-red.svg)](https://opensource.org/licenses/EPL-1.0)"
-  } else if (licenseArr === [2]){
-    return "[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)"
-  } else if (licenseArr === [3]){
-    return "[![License: MPL 2.0](https://img.shields.io/badge/License-MPL_2.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)"
+  if (license===licenseArr[0]) {
+    return `[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)`
+  } else  if (license===licenseArr[1]) {
+    return `![License](https://img.shields.io/badge/License-EPL_1.0-red.svg)](https://opensource.org/licenses/EPL-1.0)`
+  } else if (license===licenseArr[2]){
+    return `[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)`
+  } else if (license===licenseArr[3]){
+    return `[![License: MPL 2.0](https://img.shields.io/badge/License-MPL_2.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)`
   }
 }
 
@@ -47,7 +47,7 @@ function generateMarkdown(data) {
   To install the necessary dependencies, run the following command: 
 
   ----
- ${data.installation[0]}  
+ ${data.installation}  
   ----
 
   ## Usage
@@ -65,11 +65,11 @@ function generateMarkdown(data) {
 
   ## Tests
   
-  ${data.test[0]}
+  ${data.test}
 
   ## Questions
 
-  If you have any questions about the repo, please contact me at ${data.email}. You can find more of my work at https://gibhub.com/${data.github}.
+  If you have any questions about the repo, please contact me at ${data.email}. You can find more of my work at https://gibhub.com/${data.username}.
 
 `;
 }

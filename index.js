@@ -19,7 +19,6 @@ const questions = [
         type: 'input',
         name: 'installation',
         message: 'What command should be run to install dependencies?',
-        choices: ["npm i inquirer@8.2.4"]
     },
     {
         type: 'input',
@@ -29,13 +28,12 @@ const questions = [
     {
         type: 'input',
         name: 'contribution',
-        message: 'Please enter guidelines on how to contribute to the repo.'
+        message: 'What does the user need to contribute to this repo?'
     },
     {
         type: 'input',
         name: 'test',
         message: 'What command should be used to run tests?',
-        choices: ["npm test"]
     },
     {
         type: 'list',
