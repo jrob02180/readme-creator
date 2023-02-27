@@ -4,9 +4,9 @@ const licenseArr = ["Apache", "Eclipse", "MIT", "Mozilla"];
 // If there is no license, return an empty string
 function renderLicenseBadge(license) {
   if (license===licenseArr[0]) {
-    return `[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)`
+    return `[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)(https://opensource.org/licenses/Apache-2.0)]`
   } else  if (license===licenseArr[1]) {
-    return `![License](https://img.shields.io/badge/License-EPL_1.0-red.svg)](https://opensource.org/licenses/EPL-1.0)`
+    return `![License](https://img.shields.io/badge/License-EPL_1.0-red.svg)`
   } else if (license===licenseArr[2]){
     return `[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)`
   } else if (license===licenseArr[3]){
@@ -46,9 +46,9 @@ function generateMarkdown(data) {
   
   To install the necessary dependencies, run the following command: 
 
-  ----
+  ---
  ${data.installation}  
-  ----
+  ---
 
   ## Usage
   
@@ -56,7 +56,7 @@ function generateMarkdown(data) {
      
   ## License
   
- 
+ This repo is covered under the ${data.license} license.
   ---
     
   ## How to Contribute
