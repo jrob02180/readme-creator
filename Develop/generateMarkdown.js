@@ -37,9 +37,7 @@ function generateMarkdown(data) {
   
   To install the necessary dependencies, run the following command: 
 
-  ---
  ${data.installation}  
-  ---
 
   ## Usage
   
@@ -49,7 +47,7 @@ function generateMarkdown(data) {
   
  This repo is covered under the ${data.license} license.
     
-  ## How to Contribute
+  ## Contribution
   
  ${data.contribution}
 
